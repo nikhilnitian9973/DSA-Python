@@ -1,4 +1,6 @@
-#Bruteforce solution
+# Problem: convert integer to binary
+
+# Brute Force Solution
 
 def convert_int_to_binary(num):
     if num == 0:
