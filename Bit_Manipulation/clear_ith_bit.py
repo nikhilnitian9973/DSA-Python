@@ -7,3 +7,4 @@ def clear_bit(n,i):
     print("ith bit cleared")
     print(f"n = {n}")
 clear_bit(25,5)
+
