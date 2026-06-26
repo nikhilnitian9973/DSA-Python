@@ -34,7 +34,7 @@ class Solution:
         
         arr[l-1],arr[r-1] = arr[r-1], arr[l-1]
 
-        self.reverse_sub_arr2(arr,l+1,r-1)  # result is IGNORED
+        self.reverse_sub_arr3(arr,l+1,r-1)  # result is IGNORED
         # implicitly returns None
 
 
