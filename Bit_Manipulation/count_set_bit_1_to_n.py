@@ -13,7 +13,7 @@ def count_set_bit(n):
                 count +=1
     return count
 
-print(count_set_bit(1000000))
+print(count_set_bit(4))
 
 
 #Solution (T.C. -> O(log n), S.C. -> 0(1))
@@ -31,7 +31,4 @@ def count_set_bit2(n):
         bit *=2
 
     return count
-print(count_set_bit2(100000000))
-
-
-
+print(count_set_bit2(4))
