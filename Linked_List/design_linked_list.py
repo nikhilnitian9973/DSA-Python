@@ -1,10 +1,11 @@
 #leetcode 707 problem
 # designing a linked list
-
+# traverse, insert, delete(by index and by value), add at head, add at tail, middle Node, reverse sll
 class Node:
     def __init__(self,val):
         self.val = val
         self.next = None
+
 
 class MyLinkedList(object):
 
@@ -30,7 +31,12 @@ class MyLinkedList(object):
         return -1
 
 
-        
+    def traverse_sll(self):
+        curr = self.head
+        while curr != None:
+            print(curr.val,end="-->")
+            curr = curr.next
+        print(None)
 
     def addAtHead(self, val):
         """
@@ -59,8 +65,9 @@ class MyLinkedList(object):
             while curr.next != None:
                 curr = curr.next
             curr.next = new_node
-        
+    
 
+    # a prev variable can be use (initially prev = None)
     def addAtIndex(self, index, val):
         """
         :type index: int
@@ -87,7 +94,7 @@ class MyLinkedList(object):
 
 
         
-
+    # a prev variable can be use (initially prev = None)
     def deleteAtIndex(self, index):
         """
         :type index: int
@@ -106,7 +113,49 @@ class MyLinkedList(object):
                     return
                 count +=1
                 curr = curr.next
+    
+    # if value present in sll then delete 
+    def delete_by_val(self,value):
+        if self.head.val == value:
+            self.head = self.head.next
+        else:
+            flag = False
+            curr = self.head
+            while curr.next != None:
+                if curr.next.val == value:
+                    curr.next = curr.next.next
+                    return
+                curr = curr.next
+                
+            if flag == False:
+                print("value is not present in sll")
 
+
+
+
+    # if there are two middle Node then return second middle Node
+    def middle_Node(self):
+        slow = self.head
+        fast = self.head
+
+        while fast != None and fast.next != None:
+            slow = slow.next
+            fast = fast.next.next
+        mid = slow
+        return mid
+    
+
+    def reverse_sll(self):
+        prev = None
+        curr = self.head
+        while curr != None:
+            next_node = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next_node
+            
+        self.head = prev
+        
 
         
 
@@ -126,10 +175,20 @@ e3 = obj.addAtTail(4)
 e4 = obj.addAtTail(3)
 e5 = obj.addAtIndex(1,10)
 dele = obj.deleteAtIndex(3)
-print(obj.get(0))
-print(obj.get(1))
-print(obj.get(2))
-print(obj.get(3))
-print(obj.get(4))
-print(obj.get(5))
+
+print(obj.get(0),obj.get(1),obj.get(2),obj.get(3),obj.get(4),obj.get(5),obj.get(6))
+
+obj.traverse_sll()
+obj.delete_by_val(2)
+obj.traverse_sll()
+
+obj.reverse_sll()
+obj.traverse_sll()
+print(obj.middle_Node().val)
+
+
+
+
+
+
 

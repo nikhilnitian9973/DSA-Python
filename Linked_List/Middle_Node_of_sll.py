@@ -7,6 +7,8 @@ class Node:
     def __init__(self, val):
         self.val = val
         self.next = None
+
+
 class Solution:
     def middleNode(self, head):
         """
@@ -30,7 +32,9 @@ head.next.next.next.next.next = Node(6)
 a = Solution()
 print(a.middleNode(head).val)
 
-#other way for Nodes
+
+
+####   other way for Nodes
 
 node1 = Node(1)
 node2 = Node(2)
