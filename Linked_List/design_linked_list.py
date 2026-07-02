@@ -119,7 +119,7 @@ class MyLinkedList(object):
         if self.head.val == value:
             self.head = self.head.next
         else:
-            flag = False
+            
             curr = self.head
             while curr.next != None:
                 if curr.next.val == value:
@@ -127,8 +127,8 @@ class MyLinkedList(object):
                     return
                 curr = curr.next
                 
-            if flag == False:
-                print("value is not present in sll")
+            
+            print("value is not present in sll")
 
 
 
