@@ -1,15 +1,18 @@
 # return True if a sll have cycle otherwise return False
 
 
-#### Brute Force solution
-## T.C. -->> O(n) 
-## S.C  -->> O(n)
-
 
 class Node:
     def __init__(self,val):
         self.val  = val
         self.next = None
+
+
+#### Brute Force solution
+
+## T.C. -->> O(n) 
+## S.C  -->> O(n)
+
 def hasCycle(head):
     my_set = set()
     curr = head
@@ -19,6 +22,12 @@ def hasCycle(head):
         my_set.add(curr)
         curr = curr.next
     return False
+
+
+##### Optimal Solution
+
+## T.C. -->>  O(n)
+## S.C. -->>  O(1)
 
 def hasCycle1(head):
     slow = head
