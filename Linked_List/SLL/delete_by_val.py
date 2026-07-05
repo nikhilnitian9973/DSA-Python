@@ -16,6 +16,7 @@ def delete_by_val(head,value):
                 return head
             curr = curr.next
         print("value does not present in sll")
+        
 def traverse_sll(head):
     curr = head
     while curr != None:

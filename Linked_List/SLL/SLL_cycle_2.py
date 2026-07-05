@@ -55,5 +55,5 @@ Node2.next = Node3
 Node3.next = Node4
 Node4.next = Node2
 
-print(find_starting_Node(head))
-print(find_starting_Node1(head))
+print(find_starting_Node(head).val)
+print(find_starting_Node1(head).val)
