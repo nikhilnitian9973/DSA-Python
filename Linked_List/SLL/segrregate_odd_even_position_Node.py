@@ -72,6 +72,22 @@ def oddevenNode1(head):
 # T.C = O(n)
 # S.C = O(1)
 
+def oddevenNode2(head):
+    if not head and not head.next:
+        return head
+    
+    odd = head
+    even = head.next
+    even_head = head.next
+    while even and even.next:
+        odd.next = odd.next.next
+        odd = odd.next
+        
+        even.next = even.next.next
+        even = even.next
+    odd.next = even_head
+    return head
+
 Node1 = Node(1)
 Node2 = Node(2)
 Node3 = Node(3)
@@ -89,5 +105,7 @@ def traverse(head):
     while curr:
         print(curr.val,end="-->")
         curr =curr.next
+
 print(traverse(oddevenNode(head)))
 print(traverse(oddevenNode1(head)))
+print(traverse(oddevenNode2(head)))
