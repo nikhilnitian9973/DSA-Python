@@ -68,7 +68,24 @@ class MyDLL:
                 return
             count +=1
             curr = curr.next
-        
+
+    def delete_by_value(self,target):
+
+        if self.head.val == target:
+            self.head.next.prev = None
+            self.head = self.head.next
+            return 
+        curr = self.head
+
+        while curr:
+            if curr.next.val == target:
+                n = curr.next.next
+                curr.next =n
+                if n:
+                    n.prev =curr
+                return
+            curr = curr.next
+    
 
 
     def traverse(self):
@@ -89,6 +106,5 @@ a.traverse()
 a.delete_at_index(3)
 a.traverse()
 
-
-
-                
+a.delete_by_value(3)
+a.traverse()
