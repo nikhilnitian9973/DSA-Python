@@ -54,4 +54,4 @@ head.next.next.prev = head.next
 
 traverse(head)
 traverse(reverse_DLL(head))
-traverse(reverse_DLL1(head))
+traverse(reverse_DLL1(head))    
