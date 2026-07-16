@@ -22,4 +22,4 @@ def is_balanced_paranthesis(s):
         check = True
     return check
 
-print(is_balanced_paranthesis("}{()})"))
+print(is_balanced_paranthesis("[)]"))
