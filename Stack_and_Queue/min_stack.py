@@ -29,10 +29,3 @@ a.push(1)
 print(a.top())
 print(a.minimum_ele())
 
-
-def GCD(x,y):
-    while x:
-        x,y = y%x,x
-    return y
-print(GCD(0,5))
-    
