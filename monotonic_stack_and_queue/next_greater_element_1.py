@@ -5,10 +5,30 @@
 
 
 
-#Brute Force solution
+#Brute Force solution 1
+# T.C = O(n*(n+1)/2) = O(n^2)
+
+# S.C = O(1) + O(n) or O(1) 
+## here O(n) is ans and ans is also returned, so S.C can be O(1)
+## we didn't use any extra space(append), so S.C is O(1)
 
 def next_greater_arr(arr):
-    # ans = [-1] * len(arr)  (we can use this also)
+    ans = [-1] * len(arr)
+    for i in range(len(arr)):
+        for j in range(i,len(arr)):
+            if arr[j] > arr[i]:
+                ans[i] = arr[j]
+                break
+        
+    return ans
+print(next_greater_arr([1,6,3,4,2,7,0]))
+
+#Brute Force Solution 2
+# T.C = O(n*(n+1)/2) = O(n^2)
+# S.C = O(1)
+
+def next_greater_arr1(arr):
+
     for i in range(len(arr)):
         for j in range(i,len(arr)):
             if arr[j] > arr[i]:
@@ -17,26 +37,7 @@ def next_greater_arr(arr):
         else:
             arr[i] = -1
     return arr
-print(next_greater_arr([1,6,3,4,2,7,0]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(next_greater_arr1([1,6,3,4,2,7,0]))
 
 
 
@@ -44,7 +45,7 @@ print(next_greater_arr([1,6,3,4,2,7,0]))
 
 ## Optimal solution
 #T.C. = 
-def next_greater_ele_arr(arr):
+def next_greater_arr2(arr):
     stack = []
     ans = [-1]*len(arr)
     for i in range(len(arr)-1,-1,-1):
@@ -55,4 +56,5 @@ def next_greater_ele_arr(arr):
         stack.append(arr[i])
     return ans
 
-print(next_greater_ele_arr([1,6,3,4,2,7,0]))
+print(next_greater_arr2([1,6,3,4,2,7,0]))
+
