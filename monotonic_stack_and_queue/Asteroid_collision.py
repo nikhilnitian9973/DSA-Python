@@ -6,7 +6,7 @@
 
 
 ##Optimal Solution
-# T.C = 
+# T.C = O(2n) = O(n)
 # S.C = O(n)
 
 def asteroid_collision(asteroids):

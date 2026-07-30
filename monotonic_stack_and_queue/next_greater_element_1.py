@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 #Brute Force solution 1
 # T.C = O(n*(n+1)/2) = O(n^2)
 
@@ -44,7 +37,8 @@ print(next_greater_arr1([1,6,3,4,2,7,0]))
 
 
 ## Optimal solution
-#T.C. = 
+#T.C. = O(2n) = O(n)
+#S.C. = O(n-1) = O(n)
 def next_greater_arr2(arr):
     stack = []
     ans = [-1]*len(arr)
