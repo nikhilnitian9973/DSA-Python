@@ -18,7 +18,7 @@ s = "aebdceabhj"
 print(longest_substring(s))
 
 #optimal solution
-#T.C = O(n)
+#T.C =  O(n)+O(n) = O(n)
 #S.C = O(n)
 
 def longest_substring1(s):

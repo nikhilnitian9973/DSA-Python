@@ -42,7 +42,7 @@ def max_consecutive_ones1(nums,k):
 print(max_consecutive_ones1(nums,k))
         
 #Optimal solution
-#T.C = O(n)
+#T.C = O(n)+O(n) = O(n)
 #S.C = O(1)
 
 def max_consecutive_ones2(nums,k):
