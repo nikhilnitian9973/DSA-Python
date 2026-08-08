@@ -1,6 +1,7 @@
 
 #Optimal SOlution 1
-#
+#T.C = O(n)
+#S.C = O(1)
 def maximum_points(cardPoints,k):
     n = len(cardPoints)
     if k == n:
@@ -21,7 +22,8 @@ print(maximum_points(cardPoints,k))
 
 
 #Optimal SOlution 2
-#
+#T.C = O(n)
+#S.C = O(1)
 
 def maximum_points2(cardPoints,k):
     n = len(cardPoints)
